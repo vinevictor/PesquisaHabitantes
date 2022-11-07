@@ -35,6 +35,12 @@ function MaiorSalario() {
     console.log("O maior salario é R$" + maiorSal);
 }
 
+function PorcentagemPessoas() {
+    let supSalarios = salarios.filter(x => x <= 1500)
+    let porcentagem = (supSalarios.length * 100) / salarios.length
+    console.log("A porcentagem de habitantes com salarios até R$1500 é de %" + porcentagem)
+}
+
 // while para testes
 let repeat = true;
 while (repeat) {
@@ -45,4 +51,4 @@ while (repeat) {
     }
 };
 
-MaiorSalario();
+PorcentagemPessoas();
