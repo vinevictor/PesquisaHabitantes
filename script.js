@@ -24,6 +24,17 @@ function MediaDeFilhos() {
     console.log("Media de filhos: " + Math.round(mediaFilhos));
 }
 
+function MaiorSalario() {
+    let maiorSal = 0
+    salarios.forEach(x => {
+        if (x > maiorSal) {
+            maiorSal = x;
+        }
+    })
+
+    console.log("O maior salario é R$" + maiorSal);
+}
+
 // while para testes
 let repeat = true;
 while (repeat) {
@@ -34,4 +45,4 @@ while (repeat) {
     }
 };
 
-MediaDeFilhos();
+MaiorSalario();
