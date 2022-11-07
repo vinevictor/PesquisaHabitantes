@@ -11,9 +11,18 @@ function MediaDeSalarios() {
     salarios.forEach(numero => {
         somaSalarios = somaSalarios + numero;
     });
-    let mediaDeSalarios = somaSalarios / salarios.length;
-    console.log("Media de salarios dos habitantes: " + mediaDeSalarios)
+    let mediaSalarios = somaSalarios / salarios.length;
+    console.log("Media de salarios dos habitantes: R$" + mediaSalarios.toFixed(2));
 };
+
+function MediaDeFilhos() {
+    let somaQtdFilhos = 0
+    numDeFilhos.forEach(numero => {
+        somaQtdFilhos = somaQtdFilhos + numero;
+    });
+    let mediaFilhos = somaQtdFilhos / numDeFilhos.length;
+    console.log("Media de filhos: " + Math.round(mediaFilhos));
+}
 
 // while para testes
 let repeat = true;
@@ -25,3 +34,4 @@ while (repeat) {
     }
 };
 
+MediaDeFilhos();
