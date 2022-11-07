@@ -38,17 +38,28 @@ function MaiorSalario() {
 function PorcentagemPessoas() {
     let supSalarios = salarios.filter(x => x <= 1500)
     let porcentagem = (supSalarios.length * 100) / salarios.length
-    console.log("A porcentagem de habitantes com salarios até R$1500 é de %" + porcentagem)
+    console.log("A porcentagem de habitantes com salarios até R$1500 é de %" + porcentagem.toFixed(2))
 }
 
-// while para testes
+function Opcoes() {
+    let opc = prompt(" 1 - Adicionar Informações | 2 - Media De Salario | 3 - Media de Filhos | 4 - Maior Salario | 5 - Porcentagem de Pessoas com Salario ate R$1500 | 6 - Fechar.");
+
+    if (opc == 1) {
+        PegaInformacoes();
+    } else if (opc == 2) {
+        MediaDeSalarios();
+    } else if (opc == 3) {
+        MediaDeFilhos();
+    } else if (opc == 4) {
+        MaiorSalario();
+    } else if (opc == 5) {
+        PorcentagemPessoas();
+    } else if (opc == 6) {
+        repeat = false
+    }
+}
+
 let repeat = true;
 while (repeat) {
-    PegaInformacoes();
-    let continuar = prompt("");
-    if (continuar == "n") {
-        repeat = false;
-    }
+    Opcoes();
 };
-
-PorcentagemPessoas();
